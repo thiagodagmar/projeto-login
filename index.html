@@ -10,17 +10,38 @@
     <main>
         <section id="login">
             <div id="imagem">
-                foto
+                  <img src="imagens/door.jpg" alt="porta">
             </div>
-            <div>
+            <div id="formulario">
                 <h1>Bem-vindo de volta</h1>
                 <p>Use sua chave para abrir a porta.</p>
                 <form action="login.php" method="post">
-                    <label for="iemail">E-mail</label>
-                    <input type="email" name="email" id="iemail">
+                    <div>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="email" id="iemail">
+                    </div>
 
-                    <label for="isenha">Senha</label>
-                    <input type="password" name="senha" id="isenha">
+                    <div>
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha">
+                    </div>
+
+                    <div>
+                        <label for="ilembrar">
+                            <input type="checkbox" name="lembrar" id="ilembrar">Manter-me conectado
+                        </label>
+                        <a href="#">Perdi minhas chaves</a>
+                    </div>
+
+                    <div>
+                        <input type="button" value="Entrar">
+                    </div>
+
+                    <div>
+                        <p>
+                            Ainda não tem acesso? <a href="#">Criar conta</a>
+                        </p>
+                    </div>
 
                 </form>
             </div>

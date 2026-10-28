@@ -1,11 +1,116 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
 /*
-Fundo da página	#F4F1EC	creme dos losangos claros, levemente quente
-Texto principal / títulos	#013457	azul-marinho profundo do vitral
-Cor principal (botão, links) #0792A8	azul-petróleo da moldura de ferro
-Cor de apoio (hover, bordas) #7FC0CA	azul-água clara
-Acento (detalhes pontuais)	#C8503C	terracota dos losangos vermelhos
-Bordas e linhas sutis	#D2DCDF	cinza-azulado claro
+Função	Claro	Escuro
+--color-bg	#F4F1EC	#0B1F2E
+--color-surface	#FFFFFF	#12303F
+--color-text	#013457	#EAF1F3
+--color-text-muted #4D6A7A #9DB6C2
+--color-primary	#013457	#7FC0CA
+--color-on-primary	#F4F1EC	#013457
+--color-accent	#C8503C	#E8806B
+--color-border	#D2DCDF	#27495A
 
 */
+
+
+
+:root {
+    --color-bg: #F4F1EC;
+    --color-surface: #FFFFFF;
+    --color-text: #013457;
+    --color-text-muted: #4D6A7A;
+    --color-primary:#013457;
+    --color-on-primary: #F4F1EC;
+    --color-accent: #C8503C;
+    --color-border: #D2DCDF;
+
+    --font-default: "DM Sans", sans-serif;
+    --font-display: "Playfair", serif;
+
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 2rem;
+    --fs-2xl: 2.5rem;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-default);
+}
+
+section {
+    background-color: var(--color-bg);
+    height: 100vh;
+}
+
+div#imagem > img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+h1 {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+}
+
+
+
+p {
+    color: var(--color-text-muted);
+}
+
+a {
+    color: var(--color-accent);
+}
+
+label, checkbox {
+    color: var(--color-text);
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --color-bg: #0B1F2E;
+    --color-surface: #12303F;
+    --color-text: #EAF1F3;
+    --color-text-muted: #9DB6C2;
+    --color-primary: #7FC0CA;
+    --color-on-primary: #013457;
+    --color-accent: #E8806B;
+    --color-border: #27495A;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section#login {
+        display: flex;
+    }
+
+    div#imagem {
+        width: 50%;
+        height: 100vh;
+    }
+
+    div#imagem > img {
+        height: 100vh;
+        object-position: center;
+    }
+
+    div#formulario {
+        width: 50%;
+        
+    }
+}
