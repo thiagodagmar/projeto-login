@@ -10,20 +10,20 @@
     <main>
         <section id="login">
             <div id="imagem">
-                  <img src="imagens/door.jpg" alt="porta">
+                  
             </div>
             <div id="formulario">
                 <h1>Bem-vindo de volta</h1>
-                <p>Use sua chave para abrir a porta.</p>
-                <form action="login.php" method="post">
-                    <div>
+                <p class="sub">Use sua chave para abrir a porta.</p>
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="input">
                         <label for="iemail">E-mail</label>
-                        <input type="email" name="email" id="iemail">
+                        <input type="email" name="email" id="iemail" placeholder="voce@exemplo.com" autocomplete="email" required maxlength="45">
                     </div>
 
-                    <div>
+                    <div class="input">
                         <label for="isenha">Senha</label>
-                        <input type="password" name="senha" id="isenha">
+                        <input type="password" name="senha" id="isenha" placeholder="sua chave secreta" autocomplete="current-password" required minlength="8" maxlength="30">
                     </div>
 
                     <div>

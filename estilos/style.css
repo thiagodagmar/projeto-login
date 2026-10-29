@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 /*
 Função	Claro	Escuro
@@ -28,7 +29,7 @@ Função	Claro	Escuro
     --color-border: #D2DCDF;
 
     --font-default: "DM Sans", sans-serif;
-    --font-display: "Playfair", serif;
+    --font-display: "Playfair Display", serif;
 
 
     --fs-xs: 0.75rem;
@@ -36,8 +37,8 @@ Função	Claro	Escuro
     --fs-base: 1rem;
     --fs-md: 1.125rem;
     --fs-lg: 1.5rem;
-    --fs-xl: 2rem;
-    --fs-2xl: 2.5rem;
+    --fs-xl: 2.2rem;
+    --fs-2xl: 2.7rem;
 }
 
 
@@ -45,29 +46,56 @@ Função	Claro	Escuro
     margin: 0px;
     padding: 0px;
     font-family: var(--font-default);
+    box-sizing: border-box;
 }
 
-section {
+
+body, html {
     background-color: var(--color-bg);
     height: 100vh;
+    width: 100vw;
 }
 
-div#imagem > img {
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    transition: width 300ms, height 300ms;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    background: var(--color-bg) url(../imagens/door.jpg) no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 20vh;
-    object-fit: cover;
-    object-position: top;
+    height: 32vh;
+    display: block;
+}
+
+section#login > div#formulario {
+    display: block;
+    padding: 3rem 2rem;
 }
 
 h1 {
     color: var(--color-primary);
     font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    line-height: 1.1;
 }
-
-
 
 p {
     color: var(--color-text-muted);
+}
+
+.sub {
+    font-size: var(--fs-base);
+    margin-bottom: 2rem;
 }
 
 a {
@@ -78,6 +106,10 @@ label, checkbox {
     color: var(--color-text);
 }
 
+button {
+    color: var(--color-accent);
+    background: var(--color-accent);
+}
 
 /*MEDIA QUERIES*/
 
@@ -96,21 +128,36 @@ label, checkbox {
 
 @media screen and (min-width: 768px) {
     section#login {
-        display: flex;
+        width: 100vw;
     }
 
-    div#imagem {
-        width: 50%;
+    section#login > div#imagem {
+        width: 35%;
         height: 100vh;
-    }
+        background-position: center;
+        float: left;
 
-    div#imagem > img {
-        height: 100vh;
-        object-position: center;
     }
 
     div#formulario {
-        width: 50%;
+        width: 65%;
+        height: 100vh;
+        float: right;
         
+    }
+
+    h1 {
+    font-size: var(--fs-2xl);
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+
+    section#login > div#imagem {
+        width: 50%;
+    }
+
+    div#formulario {
+        width: 50%;       
     }
 }
