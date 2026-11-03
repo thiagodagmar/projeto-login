@@ -16,29 +16,29 @@
                 <h1>Bem-vindo de volta</h1>
                 <p class="sub">Use sua chave para abrir a porta.</p>
                 <form action="login.php" method="post" autocomplete="on">
-                    <div class="input">
+                    <div class="campo">
                         <label for="iemail">E-mail</label>
                         <input type="email" name="email" id="iemail" placeholder="voce@exemplo.com" autocomplete="email" required maxlength="45">
                     </div>
 
-                    <div class="input">
+                    <div class="campo">
                         <label for="isenha">Senha</label>
                         <input type="password" name="senha" id="isenha" placeholder="sua chave secreta" autocomplete="current-password" required minlength="8" maxlength="30">
                     </div>
 
-                    <div>
+                    <div class="remind">
                         <label for="ilembrar">
                             <input type="checkbox" name="lembrar" id="ilembrar">Manter-me conectado
                         </label>
                         <a href="#">Perdi minhas chaves</a>
                     </div>
 
-                    <div>
-                        <input type="button" value="Entrar">
-                    </div>
+                    
+                    <input type="submit" value="Entrar">
+                    
 
                     <div>
-                        <p>
+                        <p class="alt">
                             Ainda não tem acesso? <a href="#">Criar conta</a>
                         </p>
                     </div>

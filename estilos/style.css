@@ -24,6 +24,7 @@ Função	Claro	Escuro
     --color-text: #013457;
     --color-text-muted: #4D6A7A;
     --color-primary:#013457;
+    --color-primary-hover:#0792A8;
     --color-on-primary: #F4F1EC;
     --color-accent: #C8503C;
     --color-border: #D2DCDF;
@@ -77,7 +78,10 @@ section#login > div#imagem {
 
 section#login > div#formulario {
     display: block;
+    margin: auto;
     padding: 3rem 2rem;
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
@@ -102,13 +106,84 @@ a {
     color: var(--color-accent);
 }
 
-label, checkbox {
-    color: var(--color-text);
+
+
+
+.campo{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: block;
+
 }
 
-button {
-    color: var(--color-accent);
-    background: var(--color-accent);
+.campo > label {
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+    display: block;
+    font-size: var(--fs-sm);
+}
+
+.campo > input{
+    padding: 0.8rem;
+    background-color: var(--color-surface);
+    width: 100%;
+    border: 1.5px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    
+}
+
+.remind input {
+    background-color: var(--color-surface);
+    margin-right: 0.2rem;
+    accent-color: var(--color-primary-hover);
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--color-accent);
+    box-shadow:0 0 0 3px #c8513c81
+}
+
+.remind {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.remind>label {
+    color: var(--color-text);
+    font-size: var(--fs-sm);
+    float: left;
+}
+.remind > a {
+    font-size: var(--fs-sm);
+    text-align: right;
+    float: right;
+    
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    margin-bottom: 1rem;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: var(--color-primary-hover);
+}
+
+.alt{
+    font-size: var(--fs-sm);
+    text-align: center;
 }
 
 /*MEDIA QUERIES*/
@@ -119,6 +194,7 @@ button {
     --color-surface: #12303F;
     --color-text: #EAF1F3;
     --color-text-muted: #9DB6C2;
+    --color-primary-hover: #37B4C7;
     --color-primary: #7FC0CA;
     --color-on-primary: #013457;
     --color-accent: #E8806B;
